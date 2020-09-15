@@ -19,12 +19,7 @@ class App extends Component {
   state = {
     whatDayIsIt: 'Burrito Day',
     feeling: 'Zen',
-
-    // When I click a button
-    // I want this to change to:
-    //
-    // whatDayIsIt: 'Cage Day',
-    // feeling: 'Clickalus'
+    clickCount: 0
   }
 
   // Save a `this`!
@@ -59,6 +54,12 @@ class App extends Component {
     console.log('I have a state!', this.state);
   }
 
+  onClickMeClick = () => {
+    this.setState({
+      clickCount: this.state.clickCount + 1
+    });
+  }
+
   render() {
     // Access state
     console.log('App state is', this.state);
@@ -73,6 +74,17 @@ class App extends Component {
 
     // Return some JSX
     // JSX === "Javascript eXtended"
+
+    // Conditional rendering
+    let clickerMessage;
+    if(this.state.clickCount < 10){
+      clickerMessage = 'Keep going';
+    }else if( this.state.clickCount < 15){
+      clickerMessage = `You're doing great!`;
+    }else{
+      clickerMessage = 'Woah... chill';
+    }
+
     return (
       <div>
         <h1>{this.state.feeling} {this.state.whatDayIsIt}!</h1>
@@ -82,6 +94,14 @@ class App extends Component {
         <input type="text" placeholder="How are you feeling?" onChange={this.onFeelingChange} />
         <input type="text" placeholder="What day is it?" onChange={this.onDayChange} />
         <button onClick={this.clickalicious}>Clickalicious</button>
+
+        <div>
+          <button onClick={this.onClickMeClick}>Click Me</button>
+          You have clicked this button {this.state.clickCount} times
+          <p>
+            {clickerMessage}
+          </p>
+        </div>
 
         <h3>Things to learn about React:</h3>
         <ThingsToLearn />
