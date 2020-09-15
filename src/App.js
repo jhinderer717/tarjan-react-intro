@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import getDate from './utils/getDate';
 
 // If this were node...
 // const PictureGallery = require('./PictureGallery');
@@ -49,6 +50,8 @@ class App extends Component {
       <div>
         <h1>{this.state.feeling} {this.state.whatDayIsIt}!</h1>
 
+        <div>Today is {getDate()}</div>
+
         <h3>Things to learn about React:</h3>
         <ThingsToLearn />
 
@@ -61,6 +64,10 @@ class App extends Component {
     );
   }
 
-}
+} // end App component
+
+// function getDate(){
+//   return new Date().toLocaleDateString();
+// }
 
 export default App;
