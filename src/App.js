@@ -24,6 +24,9 @@ class App extends Component {
           <li>render() ?</li>
           <li>import / export</li>
         </ul>
+
+        <h3>Check out my picture gallery:</h3>
+        <PictureGallery />
       </div>
     );
   }

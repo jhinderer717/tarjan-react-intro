@@ -8,12 +8,12 @@ class PictureGallery extends Component {
     render(){
         return (
             <div>
-                <img src="http://picsum.photo/200/200" />
-                <img src="http://picsum.photo/200/200" />
-                <img src="http://picsum.photo/200/200" />
-                <img src="http://picsum.photo/200/200" />
-                <img src="http://picsum.photo/200/200" />
-                <img src="http://picsum.photo/200/200" />
+                <img src="http://picsum.photos/200/200" />
+                <img src="http://picsum.photos/200/201" />
+                <img src="http://picsum.photos/200/202" />
+                <img src="http://picsum.photos/200/203" />
+                <img src="http://picsum.photos/200/204" />
+                <img src="http://picsum.photos/200/205" />
             </div>
         );
     }
