@@ -14,13 +14,40 @@ import ThingsToLearn from './ThingsToLearn';
 // React Component Incantation
 class App extends Component {
 
+
+  state = {
+    whatDayIsIt: 'Burrito Day',
+    feeling: 'Zen',
+    human: [
+      {
+        firstName: 'John',
+        lastName: 'Greatest'
+      },
+      {
+        //...
+      }
+    ]
+  }
+
+
+  myAwesomeFunction(){
+    console.log('I have a state!', this.state);
+  }
+
   render() {
+    // Access state
+    console.log('App state is', this.state);
+    console.log('this is', this);
+
+    // Awesome function
+    this.myAwesomeFunction();
+
 
     // Return some JSX
     // JSX === "Javascript eXtended"
     return (
       <div>
-        <h1>Happy React Day!</h1>
+        <h1>{this.state.feeling} {this.state.whatDayIsIt}!</h1>
 
         <h3>Things to learn about React:</h3>
         <ThingsToLearn />
