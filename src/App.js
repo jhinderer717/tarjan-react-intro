@@ -8,6 +8,8 @@ import './App.css';
 // But on the client side we do
 import PictureGallery from './PictureGallery';
 
+// Import the ThingsToLearn component
+import ThingsToLearn from './ThingsToLearn';
 
 // React Component Incantation
 class App extends Component {
@@ -18,14 +20,12 @@ class App extends Component {
         <h1>Happy React Day!</h1>
 
         <h3>Things to learn about React:</h3>
-        <ul>
-          <li>HTML inside of JS files</li>
-          <li>class App extends Component?</li>
-          <li>render() ?</li>
-          <li>import / export</li>
-        </ul>
+        <ThingsToLearn />
 
         <h3>Check out my picture gallery:</h3>
+        <PictureGallery />
+
+        <h3>Here's another!</h3>
         <PictureGallery />
       </div>
     );
