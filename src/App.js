@@ -19,19 +19,43 @@ class App extends Component {
   state = {
     whatDayIsIt: 'Burrito Day',
     feeling: 'Zen',
-    human: [
-      {
-        firstName: 'John',
-        lastName: 'Greatest'
-      },
-      {
-        //...
-      }
-    ]
+
+    // When I click a button
+    // I want this to change to:
+    //
+    // whatDayIsIt: 'Cage Day',
+    // feeling: 'Clickalus'
+  }
+
+  // Save a `this`!
+  // Use arrow functions
+  // Arrow functions will save you
+  clickalicious = () => {
+    // Always use this.setState()
+    console.log('clickalicious was called');
+    this.setState({
+      feeling: 'Clickalus',
+      whatDayIsIt: 'Cage Day'
+    });
+  }
+
+  onFeelingChange = (event) => {
+    console.log('event.target', event.target);
+    console.log('event.target.value', event.target.value);
+    
+    this.setState({
+      feeling: event.target.value
+    });
+  }
+
+  onDayChange = (event) => {
+    this.setState({
+      whatDayIsIt: event.target.value
+    });
   }
 
 
-  myAwesomeFunction(){
+  myAwesomeFunction(){ // Didn't use word function because this was made in a class
     console.log('I have a state!', this.state);
   }
 
@@ -43,6 +67,9 @@ class App extends Component {
     // Awesome function
     this.myAwesomeFunction();
 
+    // If it was jQuery
+    // $(document).on('click', 'button', this.clickalicious);
+
 
     // Return some JSX
     // JSX === "Javascript eXtended"
@@ -51,6 +78,10 @@ class App extends Component {
         <h1>{this.state.feeling} {this.state.whatDayIsIt}!</h1>
 
         <div>Today is {getDate()}</div>
+
+        <input type="text" placeholder="How are you feeling?" onChange={this.onFeelingChange} />
+        <input type="text" placeholder="What day is it?" onChange={this.onDayChange} />
+        <button onClick={this.clickalicious}>Clickalicious</button>
 
         <h3>Things to learn about React:</h3>
         <ThingsToLearn />
