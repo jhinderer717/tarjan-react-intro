@@ -15,6 +15,9 @@ import ThingsToLearn from './ThingsToLearn';
 class App extends Component {
 
   render() {
+
+    // Return some JSX
+    // JSX === "Javascript eXtended"
     return (
       <div>
         <h1>Happy React Day!</h1>

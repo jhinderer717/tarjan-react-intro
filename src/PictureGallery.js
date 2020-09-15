@@ -13,7 +13,7 @@ class PictureGallery extends Component {
                 <img src="http://picsum.photos/200/202" />
                 <img src="http://picsum.photos/200/203" />
                 <img src="http://picsum.photos/200/204" />
-                <img src="http://picsum.photos/1000/200" />
+                <img src="http://picsum.photos/1000/400" />
             </div>
         );
     }
